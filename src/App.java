@@ -23,11 +23,7 @@ public class App {
         JsonParser jsonParser = new JsonParser();
         List<Map<String, String>> listaDeFilmes = jsonParser.parse(body);
 
-        for (Map<String, String> filme : listaDeFilmes) {
+        MoviePrinter.recebeLista(listaDeFilmes);
 
-            System.out.println(filme.get("title"));
-            System.out.println(filme.get("image"));
-            System.out.println(filme.get("rank"));
-        }
     }
 }
